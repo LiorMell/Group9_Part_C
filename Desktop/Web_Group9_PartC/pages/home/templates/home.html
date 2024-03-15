@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+
+    {%  block css %}
+        {{ super() }}
+        <link rel="stylesheet" href="{{ url_for('home.static', filename='css/home.css') }}">
+        <link rel='stylesheet' href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'>
+        <script defer src="{{ url_for('home.static', filename='js/home.js')}}"></script>
+    {% endblock %}
+
+{% block container_wrapper %}
+<div class="main-container">
+    <div class="login-container">
+        <form id="form" action="/login" method="POST">
+            <h1>התחברות</h1>
+            <div>
+                <div class="input-validate">
+                    <br>
+                    <label for="login_email"></label>
+                    <input class="input" type="text" id="login_email" name="login_email" placeholder="example@gmail.com">
+                    <div class="error"></div>
+                    <i class='bx bxs-user'></i>
+                    <div class="error"></div> <!-- Error message for email input -->
+                </div>
+                <div class="input-validate">
+                    <br>
+                    <label for="login_password"></label>
+                    <input class="input" type="password" id="login_password" name="login_password" placeholder="סיסמא">
+                    <div class="error"></div>
+                    <i class='bx bxs-lock-alt'></i>
+                    <div class="error"></div> <!-- Error message for password input -->
+                </div>
+            </div>
+
+            <div id="login-error-message" style="display: none; color: red;"></div>
+            <br>
+
+            <button type="submit" class="btn">התחבר</button>
+            <div class="register-link">
+                <p>עדיין לא רשום?
+                    <a href="/registration"> הירשם עכשיו!</a></p>
+            </div>
+        </form>
+    </div>
+    <div class="text-container">
+        <h1> אוהבים לאכול ולהנות?</h1>
+        <h2> Cook Eat מציעה מגוון סדנאות בישול כשרות בכל הארץ!!</h2>
+        <h2> במגוון קטגוריות, תאריכים, מקומות ושפים</h2>
+        <br>
+        <h3>הסדנא הקרובה ביותר:</h3>
+
+            <a href="/workshopSubscription?name={{ workshop.name }}&date={{ workshop.date }}&city={{ workshop.city }}&time={{ workshop.time }}&chef={{ workshop.chef }}
+                        &price={{ workshop.price }}&photo={{ workshop.photo }}&background_color={{ workshop.background_color }}">
+
+            <div class="workshop-banner" style="background-color: {{ workshop.background_color }}">
+                <img class="workshopImg" src={{ workshop.photo }} alt="next_Workshop_Img">
+                <div class="banner-section">
+                    <h1>{{ workshop.name }}</h1>
+                    <h2>{{ workshop.date }}</h2>
+                </div>
+                <div class="banner-section">
+                    <h2>{{ workshop.city }}</h2>
+                    <h2>{{ workshop.time }}</h2>
+                    <h2>{{ workshop.chef }}</h2>
+                </div>
+                <div>
+
+                </div>
+                <div class="price-banner">
+                    <h3>{{ workshop.price }}</h3>
+                </div>
+            </div>
+        </a>
+    </div>
+</div>
+{% endblock %}

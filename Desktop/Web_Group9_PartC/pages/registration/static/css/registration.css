@@ -1,0 +1,91 @@
+.button-box{
+    width: 260px;
+    margin: auto;
+    position: relative;
+    box-shadow: 0 0 20px 9px #ff61241f;
+    border-radius: 30px;
+}
+.toggle-btn{
+    padding: 10px 30px;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    outline: none;
+    position: relative;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+#btn{
+    top:0;
+    left: 0;
+    position: absolute;
+    width: 260px;
+    height: 100%;
+    background: linear-gradient(to right, #ff105f, #ffad06);
+    border-radius: 30px;
+    transition: .5s;
+}
+
+.Register-container {
+    width: 650px;
+    background-color: transparent;
+    border: 2px solid rgba(255, 255, 255, .2);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    border-radius: 10px;
+    padding: 50px 60px 10px 60px;
+    margin: 20px;
+    height: 700px;
+    overflow: hidden;
+}
+
+.Register-form{
+    top:110px;
+    position: absolute;
+    width: 480px;
+    transition: .5s;
+    display: flex;
+    justify-content: space-between;
+}
+
+#Customer{
+    left: 50px;
+}
+
+#Chef{
+    left: 650px;
+}
+
+
+#showCreditCard_Checkbox {
+    cursor: pointer;
+    font-size: 20px;
+    color: #333;
+    margin-right: 10px;
+    border: 1px solid #333;
+    border-radius: 3px;
+    text-align: center;
+    background-color: #fff;
+    width: 15px;
+    height: 15px;
+}
+
+.input-validate{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.input{
+    width: 200px;
+    padding: 10px 0;
+    margin: 5px 0;
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 1px solid #999;
+    display: block;
+
+}
+

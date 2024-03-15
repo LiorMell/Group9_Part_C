@@ -1,0 +1,28 @@
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/header.css')}}">
+
+<nav class="navBar">
+
+    <div class = "navDiv">
+
+        {% if session['userId'] %}
+            <p>שלום {{ first_name }}!
+            <a href="/logout">התנתק</a></p>
+        {%  endif %}
+
+        <ul class="navItems">
+            <li {% if current_page =='home' %} class="chosen-page"{% endif %} ><a href="/home">דף הבית</a></li>
+            <li {% if current_page =='gallery' %} class="chosen-page"{% endif %} ><a href="/gallery">גלריה</a></li>
+            <li {% if current_page =='workshops' %} class="chosen-page"{% endif %} ><a href="/workshops">רשימת סדנאות</a></li>
+            <li {% if current_page =='about' %} class="chosen-page"{% endif %} ><a href="/about">אודות</a></li>
+
+            {% if session['userId'] %}
+                <li {% if current_page =='private' %} class="chosen-page" {% endif %}><a href="/private">אזור אישי</a></li>
+            {% endif %}
+        </ul>
+
+        <a href="/">
+        <img class="img-logo" src="../static/img/CookEat-Logo.png" alt="Cook Eat Logo">  </a>
+
+    </div>
+</nav>

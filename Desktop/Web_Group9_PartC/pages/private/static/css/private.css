@@ -1,0 +1,24 @@
+.cancel_btn{
+    display: flex;
+    width: 100px;
+    height: 45px;
+    padding: 10px 30px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    background: #fff;
+    border: 0;
+    outline: none;
+    border-radius: 10px;
+    color: #555555;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px;
+    top: 25px;
+}
+
+.cancel_btn:hover{
+    border-radius: 40px;
+    background-color: lightgrey;
+    transition: .5s;
+}
