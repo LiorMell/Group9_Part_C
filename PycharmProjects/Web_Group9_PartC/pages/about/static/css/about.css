@@ -1,0 +1,21 @@
+/*---------------------------- TEXT --------------------------*/
+.about-us {
+    text-align: center;
+}
+.about-us h1{
+    font-size: 50px;
+    margin-bottom: 25px;
+}
+
+.about-us p{
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.about-image{
+    margin-right: 40px;
+    align-items: center;
+}
+.about-image:hover img{
+    transform: scale(1.1);
+}

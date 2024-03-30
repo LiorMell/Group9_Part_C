@@ -1,0 +1,215 @@
+/*<!-----------------   Whole Page ------------------>*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Calibri, serif;
+}
+
+body{
+    direction: rtl;
+    background: url(../img/food-background.jpg);
+    color: #555555;
+}
+
+a{/*all links without text-decoration*/
+    text-decoration: none; /* Remove underline from links */
+    color: inherit;
+}
+
+
+
+/*---------------------Containers-------------------------*/
+.container-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 15px;
+}
+
+.container {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border: 2px solid rgba(255, 255, 255, .2);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    border-radius: 10px;
+    padding: 50px;
+    height: max-content;
+}
+
+.column-flex{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.row-flex{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+/*--------------------Inputs-------------------------*/
+.input{
+    width: 100%;
+    outline: none;
+    padding: 5px 5px;
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 1px solid #999;
+    font-weight: 500;
+    font-size: 0.95rem;
+    border-radius: 10px;
+    margin: 5px;
+    height: 30px;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 5px #007bff;
+}
+
+.input-validate.success input{
+  outline: none;
+  border-color: #09c372;
+  box-shadow: 0 0 5px #09c372;
+}
+
+.input-validate.error input{
+  outline: none;
+  border-color: #ff3860;
+  box-shadow: 0 0 5px #ff3860;
+}
+
+.input-validate .error{
+    color: #ff3860;
+    font-size: 11px;
+    height: 13px;
+}
+
+/*--------------------------- Buttons-------------------*/
+.buttons{
+    display: flex;
+    align-items: center;
+}
+
+.submit-btn{
+    display: flex;
+    width: 100px;
+    height: 45px;
+    padding: 10px 30px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    background: #fff;
+    border: 0;
+    outline: none;
+    border-radius: 10px;
+    color: #555555;
+    align-items: center;
+
+}
+.submit-btn:hover{;
+    background-color: cadetblue;
+}
+.return-btn{
+    width: 100px;
+    height: 45px;
+    margin: 10px;
+    background: #ffffff;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    color: #555555;
+}
+.return-btn:hover {
+    background-color: lightcoral;
+}
+/* ---------------------Filter --------------------*/
+.filter-container{
+    display: flex;
+    margin: 10px;
+}
+
+.filter-item{
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+}
+
+.filter-item input{
+    height: 30px;
+    width: 160px;
+}
+
+.filter-item label{
+    font-weight: bold;
+    font-size: large;
+}
+
+/*---------------------Workshop Banners--------------------*/
+.workshop-banner{
+    display: flex;
+    justify-content: space-between;
+    width: 900px;
+    margin: 20px;
+}
+.workshopImg{
+    width: 250px;
+    height: 150px;
+}
+
+.banner-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+ }
+.price-banner {
+    background-color: #fff;
+    width: 90px;
+    height: 30px;
+    margin-top: 90px;
+    text-align: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+
+/*--------------- Quantity Button ----------------------*/
+.quantity {
+    width: 150px;
+    height: 60px;
+    padding: 15px 40px;
+    display: block;
+    margin: 10px;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.quantity span {
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.quantity span.num {
+    font-size: 18px;
+    border-right: 2px solid rgba(0, 0, 0, 0.2);
+    border-left: 2px solid rgba(0, 0, 0, 0.2);
+    pointer-events: none;
+    padding: 8px;
+    margin: 0 8px;
+}

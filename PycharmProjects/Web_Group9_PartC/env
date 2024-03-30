@@ -1,0 +1,4 @@
+import os
+
+uri = os.environ.get('mongodb+srv://CookEat:CookEat@cluster0.9fq1mpm.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0')
+

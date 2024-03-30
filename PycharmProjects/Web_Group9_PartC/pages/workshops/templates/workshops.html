@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+    {%  block css %}
+        {{ super() }}
+        <script defer src="{{ url_for('workshops.static', filename='js/workshops.js')}}"></script>
+
+        <script>
+            var workshops = {{ workshops | tojson | safe }};
+        </script>
+
+    {% endblock %}
+
+    {% block contextblock %}
+        <div class="workshops-content">
+            <h1>לוח סדנאות:</h1>
+            <div class="filter-container">
+                <div class="filter-item">
+                    <label for="nameFilter">חיפוש לפי קטגוריה</label>
+                    <input type="text" id="nameFilter">
+                </div>
+                <div class="filter-item">
+                    <label for="dateFilter">תאריך</label>
+                    <input type="date" id="dateFilter">
+                </div>
+                <div class="filter-item">
+                    <label for="chefFilter">שף</label>
+                    <input type="text" id="chefFilter">
+                </div>
+                <div class="filter-item">
+                    <label for="cityFilter">עיר</label>
+                    <input type="text" id="cityFilter">
+                </div>
+            </div>
+            <div>
+                <div id="workshopInfo"></div>
+            </div>
+        </div>
+    {% endblock %}
